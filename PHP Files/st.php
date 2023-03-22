@@ -62,7 +62,8 @@ if (isset($_POST["submit"]))
     $sql = "CREATE TABLE user_data (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	uid VARCHAR(30),
-	pass VARCHAR(50)
+	pass VARCHAR(50),
+	attempCount INT(6)
 	)";
 
     if ($conn->query($sql) === true)
