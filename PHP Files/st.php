@@ -83,9 +83,9 @@ if (isset($_POST["submit"]))
     $passa = mysqli_real_escape_string($conn, $_POST["pass"]);
     $pass = md5($passa);
 
-    $sql = "INSERT INTO user_data (uid, pass)
+    $sql = "INSERT INTO user_data (uid, pass, attempCount)
    
-	VALUES ('" . $uid . "', '" . $pass . "')";
+	VALUES ('" . $uid . "', '" . $pass . "', '"0"')";
 
     if ($conn->query($sql) === true)
     {
